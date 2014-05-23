@@ -1,3 +1,12 @@
+```bash
+scp ./bootstrap.sh server_name:~
+ssh server_name; ./bootstrap.sh
+
+./deploy.sh server_name nodes/server_name.json
+```
+
+---
+
 Overview
 ========
 
