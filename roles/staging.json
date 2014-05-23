@@ -1,0 +1,12 @@
+{
+  "name": "staging",
+  "run_list": [
+    // "recipe[cookbook_name::recipe_name]",
+    "recipe[apt]",
+    "recipe[nginx]"
+  ],
+  "default_attributes": {
+  },
+  "json_class": "Chef::Role"
+}
+
