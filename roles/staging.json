@@ -3,9 +3,22 @@
   "run_list": [
     // "recipe[cookbook_name::recipe_name]",
     "recipe[apt]",
-    "recipe[nginx]"
+    "recipe[nginx]",
+    "recipe[postgresql]",
+    "recipe[postgresql::ruby]",
+    "recipe[postgresql::server]",
+    "recipe[postgresql::config_initdb]",
+    "recipe[postgresql::config_pgtune]"
   ],
   "default_attributes": {
+    "postgresql": {
+      "password": {
+        "postgres": "0e1)WB|)c']I~!!0#4.6QtrMId)F1=m.{91{#1P-6o"
+      },
+      "config_pgtune": {
+        "db_type": "web"
+      }
+    }
   },
   "json_class": "Chef::Role"
 }

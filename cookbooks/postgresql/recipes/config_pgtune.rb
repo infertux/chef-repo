@@ -155,7 +155,7 @@ if (mem >= 256)
   # (2) shared_buffers
   #     Sets the number of shared memory buffers used by the server.
   shared_buffers =
-  { "web" => mem/4,
+  { "web" => mem/24, # FIXME: originally "mem/4" but PG doesn't start on a 512MB server otherwise
     "oltp" => mem/4,
     "dw" => mem/4,
     "mixed" => mem/4,
