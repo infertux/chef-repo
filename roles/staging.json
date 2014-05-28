@@ -4,6 +4,7 @@
     // "recipe[cookbook_name::recipe_name]",
     "recipe[apt]",
     "recipe[openssh]",
+    "recipe[sudo]",
     "recipe[nginx]",
     "recipe[postgresql]",
     "recipe[postgresql::ruby]",
@@ -17,9 +18,17 @@
         "password_authentication": "no"
       }
     },
+    "authorization": {
+      "sudo": {
+        "groups": [],
+        "users": ["yo"],
+        "passwordless": "true",
+        "sudoers_defaults": ["env_reset,mail_badpass"]
+      }
+    },
     "postgresql": {
       "password": {
-        "postgres": "0e1)WB|)c']I~!!0#4.6QtrMId)F1=m.{91{#1P-6o"
+        "postgres": "9e1)WB|)c']I~!!1#4.6QtrMId)F1=m.{12{#1P-6o"
       },
       "config_pgtune": {
         "db_type": "web"
