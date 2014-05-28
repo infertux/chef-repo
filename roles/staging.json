@@ -3,6 +3,7 @@
   "run_list": [
     // "recipe[cookbook_name::recipe_name]",
     "recipe[apt]",
+    "recipe[openssh]",
     "recipe[nginx]",
     "recipe[postgresql]",
     "recipe[postgresql::ruby]",
@@ -11,6 +12,11 @@
     "recipe[postgresql::config_pgtune]"
   ],
   "default_attributes": {
+    "openssh": {
+      "server": {
+        "password_authentication": "no"
+      }
+    },
     "postgresql": {
       "password": {
         "postgres": "0e1)WB|)c']I~!!0#4.6QtrMId)F1=m.{91{#1P-6o"
