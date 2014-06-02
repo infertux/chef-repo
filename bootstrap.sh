@@ -48,5 +48,11 @@ command -v chef-solo >/dev/null || {
   chef-solo -v
 }
 
+command -v bundle >/dev/null || {
+  gem install bundler --no-rdoc --no-ri
+
+  bundle -v
+}
+
 echo "All good to go!"
 
