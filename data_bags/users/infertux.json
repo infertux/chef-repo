@@ -1,4 +1,5 @@
 {
   "id": "infertux",
-  "groups": "sysadmin"
+  "groups": "sysadmin",
+  "shell": "/bin/bash"
 }
