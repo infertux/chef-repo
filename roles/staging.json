@@ -4,6 +4,8 @@
     // "recipe[cookbook_name::recipe_name]",
     "recipe[apt]",
     "recipe[openssh]",
+    "recipe[chef-solo-search]", // dependency for "users::sysadmins" when using Chef Solo
+    "recipe[users::sysadmins]",
     "recipe[sudo]",
     "recipe[nginx]",
     "recipe[postgresql]",
@@ -20,8 +22,8 @@
     },
     "authorization": {
       "sudo": {
-        "groups": [],
-        "users": ["yo"],
+        "groups": ["sysadmin"],
+        "users": [],
         "passwordless": "true",
         "sudoers_defaults": ["env_reset,mail_badpass"]
       }
